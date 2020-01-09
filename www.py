@@ -1,4 +1,3 @@
-# ルーティング
 from interceptors.errorHandler import *
 from interceptors.Auth import *
 from application import app
