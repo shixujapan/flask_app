@@ -4,14 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 app = Flask(__name__)
 
-manager = Manager( app )
+manager = Manager(app)
 app.config.from_pyfile("config/base_setting.py")
 
 # linux export ops_config=local|production
 # windows set ops_config=local|production
-
 if "ops_config" in os.environ:
-    app.config.from_pyfile( "config/%s_setting.py"%( os.environ['ops_config']))
+    app.config.from_pyfile("config/%s_setting.py" % (os.environ['ops_config']))
 
-db = SQLAlchemy (app)
-
+db = SQLAlchemy(app)

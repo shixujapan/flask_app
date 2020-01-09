@@ -1,21 +1,20 @@
 {% extends "common/layout.html" %}
 {% block content %}
-    <p>
-        {% if user %}
-            <span>ニックネーム: {{ user.nickname }}, qq: {{ user.qq }}</span> 
-        {% endif %}
-    </p>
-    
-    <p>
-        {% for num in num_list %}
-            <span>{{ num }}</span>
-        {% endfor %}
-    </p>
-    
-    <p>
-        {% for res in result %}
-            <span>{{res.name}}</span>
-        {% endfor %}
-    </p>
+<p>
+    {% if user %}
+    <span>ニックネーム: {{ user.nickname }}, id: {{ user.id }}, home_page: {{ user.home_page }}</span>
+    {% endif %}
+</p>
+
+<p>
+    {% for num in num_list %}
+    <span>{{ num }}</span>
+    {% endfor %}
+</p>
+
+<p>
+    {% for res in result %}
+    <span>{{res.name}}</span>
+    {% endfor %}
+</p>
 {% endblock %}
-    
